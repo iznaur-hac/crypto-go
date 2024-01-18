@@ -4,31 +4,179 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="node_modules/nouislider/dist/nouislider.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet" />
     <title>Crypto Go</title>
   </head>
   <body>
-    <header class="header container">
-      <div class="header__logo">
-        <img src="./images/logo.png" alt="header-content-header__logo" />
-      </div>
-
-      <div class="header-content">
-        <div class="header-content__blank">
-          <h1 class="header-content__title">Облачный майнинг Bitcoin</h1>
-
-          <p class="header-content__subtitle">
-            Контракты с выплатами в самых популярных и надёжных криптовалютах,
-            100+ альткоинов, а также контракт с фиксированными выплатами в USDT.
-          </p>
-
-          <button class="header-content__btn">Расчитать доходность</button>
+    <div class="wrapper">
+      <header class="header container">
+        <div class="header__logo">
+          <img src="./images/logo.png" alt="header-content-header__logo" />
         </div>
 
-        <div class="header-content__img"></div>
-      </div>
-    </header>
+        <div class="header-content">
+          <div class="header-content__blank">
+            <h1 class="header-content__title">Облачный майнинг Bitcoin</h1>
+
+            <p class="header-content__subtitle">
+              Контракты с выплатами в самых популярных и надёжных криптовалютах,
+              100+ альткоинов, а также контракт с фиксированными выплатами в
+              USDT.
+            </p>
+
+            <button class="header-content__btn">Расчитать доходность</button>
+          </div>
+
+          <div class="header-content__img"></div>
+        </div>
+      </header>
+
+      <section class="ease-mining container">
+        <h2 class="ease-mining__title">Майнинг это легко</h2>
+
+        <div class="ease-mining__blocks">
+          <div class="ease-mining__block ease-mining__block_1">
+            <p>Заполните форму на сайте <br />за 1 минуту</p>
+          </div>
+
+          <div class="ease-mining__block ease-mining__block_2">
+            <p>Внесите оплату за контракт</p>
+          </div>
+
+          <div class="ease-mining__block ease-mining__block_3">
+            <p>Получайте выплаты BTC <br />каждый день</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="calculator container">
+        <h2 class="calculator__title">
+          Калькулятор доходности <br />облачного майнинга
+        </h2>
+
+        <p class="calculator__subtitle">
+          Просто укажите сумму инвестиций или количество единиц мощности
+          (терахешей)
+        </p>
+
+        <div class="calculator__blocks">
+          <div class="calculator__block calculator__block_slide-block">
+            <div class="calculator__sum">
+              <div class="calculator__invest-sum">
+                <p>Сумма инвестиций</p>
+                <span id="investSum"></span>
+              </div>
+
+              <div class="calculator__equals">
+                <div class="equals equals_1"></div>
+                <div class="equals equals_2"></div>
+              </div>
+
+              <div class="calculator__terra-hesh">
+                <p>Терахешы</p>
+                <span id="terraHesh">9</span>
+              </div>
+            </div>
+
+            <div class="calculator__slider" id="slider"></div>
+
+            <div class="calculator__exchange-rate">
+              <div class="calculator__buttons">
+                <butttun
+                  class="calculator__button calculator__button_left calculator__button_active-btn"
+                  id="leftBtn"
+                  >По текущему курсу</butttun
+                >
+
+                <butttun
+                  class="calculator__button calculator__button_right"
+                  id="rightBtn"
+                  >Указать свой</butttun
+                >
+              </div>
+
+              <div class="calculator__items">
+                <div class="calculator__item">
+                  <img src="./images/svg/doge-coin.svg" alt="doge-coin" />
+
+                  <p>0,10$</p>
+
+                  <span>DOGE</span>
+                </div>
+
+                <div class="calculator__item">
+                  <img src="./images/svg/cripto.svg" alt="cripto-coin" />
+
+                  <p>92,50$</p>
+
+                  <span>LTC</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculator__block calculator__block_block-income">
+            <div class="calculator__income">
+              <p>Доход за день</p>
+              <div class="calculator__income-item">
+                <p id="dailyIncome">$72,39</p>
+                <span>2,3%</span>
+              </div>
+            </div>
+
+            <div class="calculator__vector"></div>
+
+            <div class="calculator__income">
+              <p>Доход за квартал</p>
+              <div class="calculator__income-item">
+                <p id="dailyIncome">$1 288,52</p>
+                <span>14,32%</span>
+              </div>
+            </div>
+
+            <div class="calculator__vector"></div>
+
+            <div class="calculator__income">
+              <p>Доход за год</p>
+              <div class="calculator__income-item">
+                <p id="dailyIncome">$5 154,06</p>
+                <span>57,27%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="calculator__block calculator__block_contract-block">
+            <div class="calculator__contract-item">
+              <p>Сумма платежа в USDT</p>
+              <div class="calculator__contract-subitem">
+                <p>8 991</p>
+                <img src="./images/svg/T.svg" alt="T" />
+              </div>
+            </div>
+
+            <div class="calculator__contract-item">
+              <p>Обслуживание в месяц</p>
+              <div class="calculator__contract-subitem">
+                <p>63$</p>
+                <img src="./images/svg/flash.svg" alt="flash" />
+              </div>
+            </div>
+
+            <button class="calculator__contract-btn">Заключить контракт</button>
+          </div>
+        </div>
+
+        <p class="calculator__subtitle">
+          Этот прогноз является ориентировочным и не включает перепродажу
+          альткойнов и комиссию за обслуживание
+        </p>
+      </section>
+    </div>
+
+    <script src="node_modules/nouislider/dist/nouislider.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
